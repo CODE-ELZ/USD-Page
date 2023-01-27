@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.loader-bg{
+    position: fixed;
+    background: linear-gradient(#0f53b1, #760fb1);
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/bgbody.png');
+    background-size: cover;
+    background-color: #0f53b1;
+    font-family: sans-serif;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35rem;
+    width: 45rem;
+    background-color: #fffbef90;
+    border-radius: 40px 20px 40px 20px;
+    box-shadow: 4px -1px 8px 5px rgba(0, 0, 0, 0.75) inset;
+    -webkit-box-shadow: 4px -1px 8px 5px rgba(0, 0, 0, 0.75) inset;
+    -moz-box-shadow: 4px -1px 8px 5px rgba(0, 0, 0, 0.75) inset;
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #760fb1;
+    font-size: 2.5em;
+}
+
+.log-interface {
+    display: grid;
+    grid-template-areas:
+        "topbar1 topbar2 "
+        "mid1 mid2 "
+        "footer1 footer2 "
+    ;
+    gap: 30px 25px;
+
+    grid-template-columns: 2fr 3fr;
+
+    padding: 50px;
+    height: 20em;
+    width: 30em;
+    border-radius: 0 40px 0 20px;
+    background-color: rgb(232, 239, 241);
+    box-shadow: 19px -7px 8px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 19px -7px 8px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 19px -7px 8px 5px rgba(0, 0, 0, 0.75);
+}
+
+.log-grid1 {
+    grid-area: topbar1;
+    color: #760fb1;
+}
+
+.log-grid2 {
+    grid-area: topbar2;
+}
+
+.log-grid3 {
+    grid-area: mid1;
+    color: #760fb1;
+}
+
+.log-grid4 {
+    grid-area: mid2;
+}
+
+
+.log-grid5 {
+    grid-area: footer1;
+    font-size: 13px;
+}
+
+.log-grid6 {
+    grid-area: footer2;
+    color: #f2f2c4;
+    border-radius: 0 20px 0 30px;
+    background: linear-gradient(#760fb1, #0f53b1);
+    transition: 1s ease-in-out;
+    font-size: 16px;
+
+}
+
+.log-grid6:hover {
+    cursor: pointer;
+    color: #0f53b1;
+    border-radius: 30px 0 20px 0;
+    background: linear-gradient(#fffbef90, #f2d3c490);
+    transition: 1s ease-in-out;
+    box-shadow: 0px 0px 7px 5px rgba(15, 83, 177, 0.75) inset;
+    -webkit-box-shadow: 0px 0px 7px 5px rgba(15, 83, 177, 0.75) inset;
+    -moz-box-shadow: 0px 0px 7px 5px rgba(15, 83, 177, 0.75) inset;
+}
+
+
+
+
+
+
+
+
+
+
+.log-interface .inputBox {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #868686;
+}
+
+.log-interface .inputBox input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #f8e8b0;
+}
+
+
+.log-interface .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #7336c2b2;
+    transition: 0.5s;
+    border-radius: 10px 0 20px 0;
+    box-shadow: 6px -6px 8px 5px #0f53b1 inset;
+    -webkit-box-shadow: 6px -6px 8px 5px #0f53b1 inset;
+    -moz-box-shadow: 6px -6px 8px 5px #0f53b1 inset;
+}
+
+.log-interface .inputBox input:focus~.line,
+.log-interface .inputBox input:valid~.line {
+    height: 100%;
+}
+
+
+
+
+

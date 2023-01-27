@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "rtopbar ltopbar"
+    "sidebar main"
+    ;
+
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 20% auto;
+}
+.profile{grid-area: rtopbar;
+border: 1px solid aqua;}
+header{grid-area: ltopbar;
+border: 1px solid black;}
+#navMen{grid-area: sidebar;
+border: 1px solid blue;}
+.main-contant{grid-area: main;
+border: 1px solid brown;}
