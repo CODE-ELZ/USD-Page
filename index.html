@@ -1,141 +1,239 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/usdPage.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>USD-Page</title>
+/*           up above is the start of every page */
 
+body {
+    background-color: #f9f9f9;
+}
 
-</head>
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "rtopbar ltopbar"
+        "sidebar main"
+    ;
 
-<body>
-
-    <div class="loader-bg">
-        <img class="bitcoin" src="img/bitcon.gif" alt="">
-    </div>
-    <main>
-        <div class="profile">
-            <img src="img/account.png" width="70" height="70" alt="">
-            <div class="wrapper">
-                <div>ELZAHI SAAID</div>
-                <div>ID: ShiRui682826607</div>
-                <div>aelzahi@gmail.com</div>
-
-            </div>
-        </div>
-        <section id="navMen" class="naVmen">
-
-            <ul class="ul">
-                <li class=" li"><a href="#content" id="contentt" data-text="Home"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/home.png" alt=""></a></li>
-                <li class="li  thepage"><a href="#about" data-text="USD Account" id="aboutt"><img
-                            onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/usd.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="Digital Account"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/digital.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="Swap"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/swap.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="Quick Pay"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/quick.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="Records"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/records.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="Settings"><img onmouseover="bigImg(this)"
-                            onmouseout="normalImg(this)" src="img/settings.png" alt=""></a></li>
-                <li class=" li"><a href="#" data-text="FAQ"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"
-                            src="img/faq.png" alt=""></a></li>
-            </ul>
-        </section>
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 20% auto;
+        background-image: radial-gradient(circle,  #c2e7ff, #f1e2ff);
 
 
-        <header>
+}
 
-            <div class="contact">
-                <div class="lang">
-                    <a href=""><img src="img/lang.png" style="width: 40px; height: 40px" alt=""></a>
-                    <select class="form-select border-0" aria-label="Default select example">
-                        <option selected>English</option>
-                        <option value="1">chinese</option>
-                    </select>
-                </div>
-                <div class="icon-faq">
-                    <div class="icon">
-                        <a href="https://wa.link/0oiyi2"><img src="img/whats.png" style="width: 40px; height: 40px" alt=""></a>
-                        <a href="https://t.me/KYC_Helper"><img src="img/tely.png" style="width: 40px; height: 40px" alt=""></a>
-                    </div>
-                    <div class="faq">
-                        <div>Need help?</div>
-                        <div>shiRui.com</div>
-                    </div>
-                </div>
-            </div>
-        </header>
+.profile {
+    grid-area: rtopbar;
+    position: fixed;
+    height: 20%;
+    z-index: 5;
 
+}
 
+header {
+    grid-area: ltopbar;
+    position: fixed;
+    height: 20%;
+    width: 95%;
+    z-index: 3;
+        background-image: radial-gradient(circle,  #c2e7ff, #f1e2ff);
 
+}
 
-        <section class="main-contant">
-            <div class="main-p1">
-                <div class="balance">
-                    <h5>Total Balance</h5>
-                    <h5>0.00 USD</h5>
-                </div>
-                <div class="fiat">
-                    <p>My Fiat Asset</p>
-                    <p>0.00 USD</p>
-                </div>
-                <button>Swap</button>
-            </div>
-            <div class="main-p2">
-                <div class="money">
-                    <div class="siz1 m-p1">
-                        <span>Deposit</span>
-                    </div>
-                    <div class="siz1 m-p2">
-                        <span>Withdraw</span>
-                    </div>
-                    <div class="siz1 m-p3">
-                        <span>Credit Card</span>
-                    </div>
-                    <div class="siz1 m-p4">
-                        <span>Debit Card</span>
-                    </div>
-                </div>
-                <div class="account">
-                    <div class="siz2 a-p1">
-                        <span>Recent Activities</span>
-                        <div class="trads">
-                            <img src="img/record.png" alt="">
-                            <p>Your trading records will show up here.</p>
-                        </div>
-                    </div>
-                    <div class="siz2 a-p2">
-                        <span>Linked Accounts</span>
-                        <div class="trads">
-                            <img src="img/linked.png" alt="">
-                            <div class="links">
-                                <p>No account linked.</p>
-                                <p><a href="">Click to link your First account</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+#navMen {
+    grid-area: sidebar;
+    position: fixed;
+    bottom: 0;
+    width: 16.6%;
+}
 
-    </main>
+.main-contant {
+    grid-area: main;
+    padding: 5%;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-areas:
+        "topbar footer"
+    ;
+    grid-template-columns: 1fr 5fr;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+.main-p1 {
+    grid-area: topbar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px 20px 20px 20px;
+    align-items: center;
+    background-image: radial-gradient(circle,  #c2e7ff, #f1e2ff);
+    box-shadow: 5px 0px 5px 3px rgba(207,205,203,0.75);
+-webkit-box-shadow: 5px 0px 5px 3px rgba(207,205,203,0.75);
+-moz-box-shadow: 5px 0px 5px 3px rgba(207,205,203,0.75);
+}
 
-</html>
+.main-p1 button {
+    text-align: center;
+    cursor: pointer;
+    color: #1a1919;
+    font-weight: 700;
+    border: none;
+    transition: 0.5s ease-in-out;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 10px;
+    background: linear-gradient(#f1e2ff 20%, #e7ecf3 80%);
+    box-shadow: 0px 0px 5px 3px #cfcdcbb3;
+    -webkit-box-shadow: 0px 0px 5px 3px #cfcdcbb3;
+    -moz-box-shadow: 0px 0px 5px 3px #cfcdcbb3;
+}
+
+.main-p1 button:hover {
+    height: 2rem;
+    border-radius: 5px;
+    background: linear-gradient(#e7ecf3 20%, #fff2e2 80%);
+    width: 6rem;
+    transition: 0.5s ease-in-out;
+}
+
+.balance h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-p2 {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.money{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.m-p1,.m-p2{
+    background-image: linear-gradient(to right bottom, #fff2e2, #ffebe1, #ffe6e8, #ffe2f3, #f1e2ff);
+}
+.m-p3,.m-p4{
+    background-image: linear-gradient(to right bottom, #fff2e2, #ffebe1, #ffe6e8, #ffe2f3, #f1e2ff);
+}
+.a-p1,.a-p2{
+    background-image: linear-gradient(to top, #e1f2df, #daf5f0, #e1f5fc, #eef5ff, #f9f5fc);
+}
+
+.siz1{
+    width: 24%;
+    height: 90%;
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 5px 3px #abaaa8c3;
+    -webkit-box-shadow: 0px 0px 5px 3px #abaaa8c3;
+    -moz-box-shadow: 0px 0px 5px 3px #abaaa8c3;
+}
+.siz1 span{
+    font-weight: 600;
+    position: relative;
+    top: 30%;
+    left: 20%;
+}
+.account{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.siz2{
+    width: 49%;
+    height: 90%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 5px 3px #abaaa8c3;
+    -webkit-box-shadow: 0px 0px 5px 3px #abaaa8c3;
+    -moz-box-shadow: 0px 0px 5px 3px #abaaa8c3;
+}
+.siz2 span{
+    font-weight: 600;
+    position: relative;
+    top: 10%;
+    left: 15%;
+}
+.trads{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #908a8a;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    color: #00ad00;
+
+}
+.links a{
+    text-decoration: none;
+    color: #00ad00;
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.profile img {
+    margin-right: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    width: 40%;
+}
+
+img,
+ul {
+    text-decoration: none;
+}
+
+.lang {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon-faq {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.icon {
+    margin: 0 5px;
+}
+
+.faq {
+    margin-left: 30px;
+}
